@@ -1,0 +1,6 @@
+framework module Pods_SLWebEngine_Example {
+  umbrella header "Pods-SLWebEngine_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

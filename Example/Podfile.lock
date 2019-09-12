@@ -1,0 +1,16 @@
+PODS:
+  - SLWebEngine (0.1.0)
+
+DEPENDENCIES:
+  - SLWebEngine (from `../`)
+
+EXTERNAL SOURCES:
+  SLWebEngine:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SLWebEngine: 4d39464e7fdf658874ac313c562e36bcd6f632a2
+
+PODFILE CHECKSUM: 1febc720a6c6e7e02996900ade62c72e4aa8de2f
+
+COCOAPODS: 1.7.5

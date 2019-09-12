@@ -1,0 +1,22 @@
+{
+  "name": "SLWebEngine",
+  "version": "0.1.0",
+  "summary": "A short description of SLWebEngine.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/forestfsl/SLWebEngine",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "forestfsl": "fengsonglin@beiyugame.com"
+  },
+  "source": {
+    "git": "https://github.com/forestfsl/SLWebEngine.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SLWebEngine/Classes/**/*"
+}
