@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076724CD232F612300DDD565 /* APIAFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724B7232F612200DDD565 /* APIAFURLSessionManager.h */; };
+		076724D1232F612300DDD565 /* APIWebEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724BB232F612200DDD565 /* APIWebEngine.h */; };
+		076724D2232F612300DDD565 /* APIAFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724BC232F612200DDD565 /* APIAFURLResponseSerialization.h */; };
+		076724D3232F612300DDD565 /* APIAFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724BD232F612200DDD565 /* APIAFURLRequestSerialization.h */; };
+		076724D4232F612300DDD565 /* APIAFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724BE232F612200DDD565 /* APIAFNetworking.h */; };
+		076724D5232F612300DDD565 /* APIWebEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724BF232F612200DDD565 /* APIWebEngine.m */; };
+		076724D6232F612300DDD565 /* SystemDeviceSimulateIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724C0232F612200DDD565 /* SystemDeviceSimulateIDFA.m */; };
+		076724D7232F612300DDD565 /* APIHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724C1232F612200DDD565 /* APIHeader.h */; };
+		076724D8232F612300DDD565 /* APIAFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724C2232F612200DDD565 /* APIAFURLResponseSerialization.m */; };
+		076724D9232F612300DDD565 /* APIAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724C3232F612200DDD565 /* APIAFHTTPSessionManager.m */; };
+		076724DA232F612300DDD565 /* APIAFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724C4232F612200DDD565 /* APIAFURLRequestSerialization.m */; };
+		076724DB232F612300DDD565 /* APIAFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724C5232F612300DDD565 /* APIAFURLSessionManager.m */; };
+		076724DD232F612300DDD565 /* APIAFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724C7232F612300DDD565 /* APIAFHTTPSessionManager.h */; };
+		076724DE232F612300DDD565 /* SystemDeviceSimulateIDFA.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724C8232F612300DDD565 /* SystemDeviceSimulateIDFA.h */; };
+		076724DF232F612300DDD565 /* APIAFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724C9232F612300DDD565 /* APIAFSecurityPolicy.m */; };
+		076724E0232F612300DDD565 /* APIAFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724CA232F612300DDD565 /* APIAFSecurityPolicy.h */; };
+		076724E1232F612300DDD565 /* APIAFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076724CB232F612300DDD565 /* APIAFNetworkReachabilityManager.m */; };
+		076724E2232F612300DDD565 /* APIAFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 076724CC232F612300DDD565 /* APIAFNetworkReachabilityManager.h */; };
 		07858B13BE801D683F7735D2927C6A1E /* SLWebEngine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6311424D6036B8C6C4CD6BD4A1486579 /* SLWebEngine-dummy.m */; };
 		260EA5A9D65A4657954CE54209393435 /* Pods-SLWebEngine_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A911F7F1F318DEF7772E5036C6D2AD /* Pods-SLWebEngine_Tests-dummy.m */; };
 		4EFD9A90A8899ED15497AE9500098B0C /* Pods-SLWebEngine_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E500E4318401DAB51A8A539320F6C5AA /* Pods-SLWebEngine_Example-dummy.m */; };
@@ -36,6 +54,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		076724B7232F612200DDD565 /* APIAFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFURLSessionManager.h; path = SLWebEngine/Classes/APIAFURLSessionManager.h; sourceTree = "<group>"; };
+		076724BB232F612200DDD565 /* APIWebEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIWebEngine.h; path = SLWebEngine/Classes/APIWebEngine.h; sourceTree = "<group>"; };
+		076724BC232F612200DDD565 /* APIAFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFURLResponseSerialization.h; path = SLWebEngine/Classes/APIAFURLResponseSerialization.h; sourceTree = "<group>"; };
+		076724BD232F612200DDD565 /* APIAFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFURLRequestSerialization.h; path = SLWebEngine/Classes/APIAFURLRequestSerialization.h; sourceTree = "<group>"; };
+		076724BE232F612200DDD565 /* APIAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFNetworking.h; path = SLWebEngine/Classes/APIAFNetworking.h; sourceTree = "<group>"; };
+		076724BF232F612200DDD565 /* APIWebEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIWebEngine.m; path = SLWebEngine/Classes/APIWebEngine.m; sourceTree = "<group>"; };
+		076724C0232F612200DDD565 /* SystemDeviceSimulateIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemDeviceSimulateIDFA.m; path = SLWebEngine/Classes/SystemDeviceSimulateIDFA.m; sourceTree = "<group>"; };
+		076724C1232F612200DDD565 /* APIHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIHeader.h; path = SLWebEngine/Classes/APIHeader.h; sourceTree = "<group>"; };
+		076724C2232F612200DDD565 /* APIAFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIAFURLResponseSerialization.m; path = SLWebEngine/Classes/APIAFURLResponseSerialization.m; sourceTree = "<group>"; };
+		076724C3232F612200DDD565 /* APIAFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIAFHTTPSessionManager.m; path = SLWebEngine/Classes/APIAFHTTPSessionManager.m; sourceTree = "<group>"; };
+		076724C4232F612200DDD565 /* APIAFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIAFURLRequestSerialization.m; path = SLWebEngine/Classes/APIAFURLRequestSerialization.m; sourceTree = "<group>"; };
+		076724C5232F612300DDD565 /* APIAFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIAFURLSessionManager.m; path = SLWebEngine/Classes/APIAFURLSessionManager.m; sourceTree = "<group>"; };
+		076724C7232F612300DDD565 /* APIAFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFHTTPSessionManager.h; path = SLWebEngine/Classes/APIAFHTTPSessionManager.h; sourceTree = "<group>"; };
+		076724C8232F612300DDD565 /* SystemDeviceSimulateIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemDeviceSimulateIDFA.h; path = SLWebEngine/Classes/SystemDeviceSimulateIDFA.h; sourceTree = "<group>"; };
+		076724C9232F612300DDD565 /* APIAFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIAFSecurityPolicy.m; path = SLWebEngine/Classes/APIAFSecurityPolicy.m; sourceTree = "<group>"; };
+		076724CA232F612300DDD565 /* APIAFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFSecurityPolicy.h; path = SLWebEngine/Classes/APIAFSecurityPolicy.h; sourceTree = "<group>"; };
+		076724CB232F612300DDD565 /* APIAFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIAFNetworkReachabilityManager.m; path = SLWebEngine/Classes/APIAFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		076724CC232F612300DDD565 /* APIAFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIAFNetworkReachabilityManager.h; path = SLWebEngine/Classes/APIAFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		15B0AAD4A385DF3AF1C89088CE7405B2 /* Pods-SLWebEngine_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLWebEngine_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1CEB094C921E3964F6C2DD15A4EF4924 /* Pods-SLWebEngine_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLWebEngine_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1FFF32B4236FD3E87FF4C6D713743123 /* Pods-SLWebEngine_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLWebEngine_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -152,6 +188,24 @@
 		8F2661DA823018D7093B48E1AE6676C9 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				076724C7232F612300DDD565 /* APIAFHTTPSessionManager.h */,
+				076724C3232F612200DDD565 /* APIAFHTTPSessionManager.m */,
+				076724BE232F612200DDD565 /* APIAFNetworking.h */,
+				076724CC232F612300DDD565 /* APIAFNetworkReachabilityManager.h */,
+				076724CB232F612300DDD565 /* APIAFNetworkReachabilityManager.m */,
+				076724CA232F612300DDD565 /* APIAFSecurityPolicy.h */,
+				076724C9232F612300DDD565 /* APIAFSecurityPolicy.m */,
+				076724BD232F612200DDD565 /* APIAFURLRequestSerialization.h */,
+				076724C4232F612200DDD565 /* APIAFURLRequestSerialization.m */,
+				076724BC232F612200DDD565 /* APIAFURLResponseSerialization.h */,
+				076724C2232F612200DDD565 /* APIAFURLResponseSerialization.m */,
+				076724B7232F612200DDD565 /* APIAFURLSessionManager.h */,
+				076724C5232F612300DDD565 /* APIAFURLSessionManager.m */,
+				076724C1232F612200DDD565 /* APIHeader.h */,
+				076724BB232F612200DDD565 /* APIWebEngine.h */,
+				076724BF232F612200DDD565 /* APIWebEngine.m */,
+				076724C8232F612300DDD565 /* SystemDeviceSimulateIDFA.h */,
+				076724C0232F612200DDD565 /* SystemDeviceSimulateIDFA.m */,
 				8EC1908CFD9EAC6365CBAC2C68E1E776 /* LICENSE */,
 				6BCB916CA90F672735D4A51E2E4DAEB7 /* README.md */,
 				FDC7BBA50DEC5BC886CB1AF581F4950E /* SLWebEngine.podspec */,
@@ -241,7 +295,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076724E0232F612300DDD565 /* APIAFSecurityPolicy.h in Headers */,
+				076724DE232F612300DDD565 /* SystemDeviceSimulateIDFA.h in Headers */,
+				076724D2232F612300DDD565 /* APIAFURLResponseSerialization.h in Headers */,
+				076724E2232F612300DDD565 /* APIAFNetworkReachabilityManager.h in Headers */,
 				942A51C15C99C9A37562E868385E05CD /* Pods-SLWebEngine_Example-umbrella.h in Headers */,
+				076724DD232F612300DDD565 /* APIAFHTTPSessionManager.h in Headers */,
+				076724D3232F612300DDD565 /* APIAFURLRequestSerialization.h in Headers */,
+				076724D7232F612300DDD565 /* APIHeader.h in Headers */,
+				076724D1232F612300DDD565 /* APIWebEngine.h in Headers */,
+				076724D4232F612300DDD565 /* APIAFNetworking.h in Headers */,
+				076724CD232F612300DDD565 /* APIAFURLSessionManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +426,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EFD9A90A8899ED15497AE9500098B0C /* Pods-SLWebEngine_Example-dummy.m in Sources */,
+				076724D6232F612300DDD565 /* SystemDeviceSimulateIDFA.m in Sources */,
+				076724D8232F612300DDD565 /* APIAFURLResponseSerialization.m in Sources */,
+				076724DA232F612300DDD565 /* APIAFURLRequestSerialization.m in Sources */,
+				076724E1232F612300DDD565 /* APIAFNetworkReachabilityManager.m in Sources */,
+				076724D9232F612300DDD565 /* APIAFHTTPSessionManager.m in Sources */,
+				076724D5232F612300DDD565 /* APIWebEngine.m in Sources */,
+				076724DB232F612300DDD565 /* APIAFURLSessionManager.m in Sources */,
+				076724DF232F612300DDD565 /* APIAFSecurityPolicy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

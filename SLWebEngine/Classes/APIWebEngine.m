@@ -9,7 +9,6 @@
 #import "APIWebEngine.h"
 #import "APIHeader.h"
 #import "APIAFNetworking.h"
-#import "APIProgressHUD+Board.h"
 #include <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
@@ -178,10 +177,6 @@
                 }
                 
             }else{
-                NSString *msg = [NSString stringWithFormat:@"%@",[dict objectForKey:@"msg"]];
-                if (msg.length > 0) {
-                    [APIProgressHUD showError:msg];
-                }
                 if (story_fail) {
                     story_fail(dict);
                 }
@@ -265,17 +260,11 @@
                 engineA_complete(YES,dict);
             }else{
                 NSLog(@"\n[网络请求][ResponseObj] : %@",responseObject);
-                engineA_complete(NO,nil);
-                NSString *msg = [NSString stringWithFormat:@"异常数据\n%@",responseObject];
-                [APIProgressHUD hideHUD];
-                [APIProgressHUD showError:msg];
+                engineA_complete(NO,responseObject);
             }
         }else{
             NSLog(@"\n[网络请求][Response] : %@\n[网路请求][RequestURL] : %@\n[网路请求][StatusCode] : %ld\n[网络请求][Error] : %@",response,httpResponse.URL,(long)httpResponse.statusCode,error);
             engineA_complete(NO,@{@"error":error});
-            NSString *msg = [NSString stringWithFormat:@"请求失败: 内部服务器错误 (%ld)",(long)statusCode];
-            [APIProgressHUD hideHUD];
-            [APIProgressHUD showError:msg];
         }
     }] resume];
 }

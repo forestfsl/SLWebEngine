@@ -9,6 +9,7 @@
 #ifndef APIHeader_h
 #define APIHeader_h
 
-
+#import "APIWebEngine.h"
+#import "SystemDeviceSimulateIDFA.h"
 
 #endif /* APIHeader_h */
