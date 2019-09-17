@@ -10,6 +10,16 @@
 #endif
 #endif
 
+#import "APIAFHTTPSessionManager.h"
+#import "APIAFNetworking.h"
+#import "APIAFNetworkReachabilityManager.h"
+#import "APIAFSecurityPolicy.h"
+#import "APIAFURLRequestSerialization.h"
+#import "APIAFURLResponseSerialization.h"
+#import "APIAFURLSessionManager.h"
+#import "APIHeader.h"
+#import "APIWebEngine.h"
+#import "SystemDeviceSimulateIDFA.h"
 
 FOUNDATION_EXPORT double SLWebEngineVersionNumber;
 FOUNDATION_EXPORT const unsigned char SLWebEngineVersionString[];

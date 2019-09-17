@@ -23,7 +23,7 @@
 #import <zlib.h>
 #import <dlfcn.h>
 #import <CommonCrypto/CommonDigest.h>
-#import "CTMediator+Config.h"
+#import <CTMediatoKit/CTMediator+Config.h>
 
 
 // 上传日志的LogUrl

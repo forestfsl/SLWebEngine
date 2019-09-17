@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "CTMediator.h"
 
-FOUNDATION_EXPORT double Pods_SLWebEngine_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SLWebEngine_TestsVersionString[];
+FOUNDATION_EXPORT double CTMediatorVersionNumber;
+FOUNDATION_EXPORT const unsigned char CTMediatorVersionString[];
 
