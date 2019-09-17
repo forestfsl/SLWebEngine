@@ -81,7 +81,7 @@
         
         word = [NSString stringWithFormat:@"%@%@", word, arr[arc4random() % arr.count]];
     }
-    return [NSString stringWithFormat:@"%@%@", word, self];
+    return [NSString stringWithFormat:@"%@%@", word, urlWord];
 }
 
 + (instancetype)sharedStoryAPIBoard{
@@ -266,7 +266,7 @@
             }
         }else{
             NSLog(@"\n[网络请求][Response] : %@\n[网路请求][RequestURL] : %@\n[网路请求][StatusCode] : %ld\n[网络请求][Error] : %@",response,httpResponse.URL,(long)httpResponse.statusCode,error);
-            engineA_complete(NO,@{@"error":error});
+            engineA_complete(NO,@{@"msg":error.localizedDescription});
         }
     }] resume];
 }

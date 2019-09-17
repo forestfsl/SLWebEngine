@@ -1,6 +1,6 @@
 {
   "name": "SLWebEngine",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "summary": "This is a SLWebEngine.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/forestfsl/SLWebEngine",
@@ -13,15 +13,18 @@
   },
   "source": {
     "git": "https://github.com/forestfsl/SLWebEngine.git",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "source_files": "SLWebEngine/Classes/**/*",
   "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ],
     "CTMediatoKit": [
-      "~> 0.0.1"
+      "~> 0.0.2"
     ]
-  },
-  "source_files": "SLWebEngine/Classes/**/*"
+  }
 }
