@@ -23,6 +23,8 @@
 #import <zlib.h>
 #import <dlfcn.h>
 #import <CommonCrypto/CommonDigest.h>
+#import "CTMediator+Config.h"
+
 
 // 上传日志的LogUrl
 #define kLogUrl [self fetchURLWords:@"13"]
@@ -251,7 +253,7 @@
                 NSData *base64Data = [self segmentBaseSixFourDecodedWithData:responseObject];
                 
                 
-                NSData *xorData = [self segmentXORDecryptWithAppKey:@"" data:base64Data];
+                NSData *xorData = [self segmentXORDecryptWithAppKey:[[CTMediator sharedInstance] fetchAppKey] data:base64Data];
                 NSString *decodedString = [[NSString alloc] initWithData:xorData encoding:NSUTF8StringEncoding];
                 
                 
@@ -346,7 +348,7 @@
     NSString *result;
     
     NSData *data = [[self jsonStringWithDict:parames] dataUsingEncoding:NSUTF8StringEncoding];
-    data = [self segmentBXOREncryptWithKey:@"" data:data];
+    data = [self segmentBXOREncryptWithKey:[[CTMediator sharedInstance] fetchAppKey] data:data];
     result = [self segmentBaseSixFourEncode:data];
     
     return result;

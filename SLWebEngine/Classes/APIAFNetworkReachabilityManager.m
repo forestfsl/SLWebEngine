@@ -31,40 +31,40 @@
 NSString * const APIAFNetworkingReachabilityDidChangeNotification = @"com.alamofire.networking.reachability.change";
 NSString * const APIAFNetworkingReachabilityNotificationStatusItem = @"APIAFNetworkingReachabilityNotificationStatusItem";
 
-typedef void (^StoryAFNetworkReachabilityStatusBlock)(StoryAFNetworkReachabilityStatus status);
+typedef void (^APIAFNetworkReachabilityStatusBlock)(APIAFNetworkReachabilityStatus status);
 
-NSString * StoryAFStringFromNetworkReachabilityStatus(StoryAFNetworkReachabilityStatus status) {
+NSString * StoryAFStringFromNetworkReachabilityStatus(APIAFNetworkReachabilityStatus status) {
     switch (status) {
-        case StoryAFNetworkReachabilityStatusNotReachable:
+        case APIAFNetworkReachabilityStatusNotReachable:
             return NSLocalizedStringFromTable(@"Not Reachable", @"AFNetworking", nil);
-        case StoryAFNetworkReachabilityStatusReachableViaWWAN:
+        case APIAFNetworkReachabilityStatusReachableViaWWAN:
             return NSLocalizedStringFromTable(@"Reachable via WWAN", @"AFNetworking", nil);
-        case StoryAFNetworkReachabilityStatusReachableViaWiFi:
+        case APIAFNetworkReachabilityStatusReachableViaWiFi:
             return NSLocalizedStringFromTable(@"Reachable via WiFi", @"AFNetworking", nil);
-        case StoryAFNetworkReachabilityStatusUnknown:
+        case APIAFNetworkReachabilityStatusUnknown:
         default:
             return NSLocalizedStringFromTable(@"Unknown", @"AFNetworking", nil);
     }
 }
 
-static StoryAFNetworkReachabilityStatus StoryAFNetworkReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) {
+static APIAFNetworkReachabilityStatus APIAFNetworkReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) {
     BOOL isReachable = ((flags & kSCNetworkReachabilityFlagsReachable) != 0);
     BOOL needsConnection = ((flags & kSCNetworkReachabilityFlagsConnectionRequired) != 0);
     BOOL canConnectionAutomatically = (((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) || ((flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0));
     BOOL canConnectWithoutUserInteraction = (canConnectionAutomatically && (flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0);
     BOOL isNetworkReachable = (isReachable && (!needsConnection || canConnectWithoutUserInteraction));
 
-    StoryAFNetworkReachabilityStatus status = StoryAFNetworkReachabilityStatusUnknown;
+    APIAFNetworkReachabilityStatus status = APIAFNetworkReachabilityStatusUnknown;
     if (isNetworkReachable == NO) {
-        status = StoryAFNetworkReachabilityStatusNotReachable;
+        status = APIAFNetworkReachabilityStatusNotReachable;
     }
 #if	TARGET_OS_IPHONE
     else if ((flags & kSCNetworkReachabilityFlagsIsWWAN) != 0) {
-        status = StoryAFNetworkReachabilityStatusReachableViaWWAN;
+        status = APIAFNetworkReachabilityStatusReachableViaWWAN;
     }
 #endif
     else {
-        status = StoryAFNetworkReachabilityStatusReachableViaWiFi;
+        status = APIAFNetworkReachabilityStatusReachableViaWiFi;
     }
 
     return status;
@@ -78,8 +78,8 @@ static StoryAFNetworkReachabilityStatus StoryAFNetworkReachabilityStatusForFlags
  * a queued notification (for an earlier status condition) is processed after
  * the later update, resulting in the listener being left in the wrong state.
  */
-static void StoryAFPostReachabilityStatusChange(SCNetworkReachabilityFlags flags, StoryAFNetworkReachabilityStatusBlock block) {
-    StoryAFNetworkReachabilityStatus status = StoryAFNetworkReachabilityStatusForFlags(flags);
+static void StoryAFPostReachabilityStatusChange(SCNetworkReachabilityFlags flags, APIAFNetworkReachabilityStatusBlock block) {
+    APIAFNetworkReachabilityStatus status = APIAFNetworkReachabilityStatusForFlags(flags);
     dispatch_async(dispatch_get_main_queue(), ^{
         if (block) {
             block(status);
@@ -90,16 +90,16 @@ static void StoryAFPostReachabilityStatusChange(SCNetworkReachabilityFlags flags
     });
 }
 
-static void StoryAFNetworkReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkReachabilityFlags flags, void *info) {
-    StoryAFPostReachabilityStatusChange(flags, (__bridge StoryAFNetworkReachabilityStatusBlock)info);
+static void APIAFNetworkReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkReachabilityFlags flags, void *info) {
+    StoryAFPostReachabilityStatusChange(flags, (__bridge APIAFNetworkReachabilityStatusBlock)info);
 }
 
 
-static const void * StoryAFNetworkReachabilityRetainCallback(const void *info) {
+static const void * APIAFNetworkReachabilityRetainCallback(const void *info) {
     return Block_copy(info);
 }
 
-static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
+static void APIAFNetworkReachabilityReleaseCallback(const void *info) {
     if (info) {
         Block_release(info);
     }
@@ -107,8 +107,8 @@ static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
 
 @interface APIAFNetworkReachabilityManager ()
 @property (readonly, nonatomic, assign) SCNetworkReachabilityRef networkReachability;
-@property (readwrite, nonatomic, assign) StoryAFNetworkReachabilityStatus networkReachabilityStatus;
-@property (readwrite, nonatomic, copy) StoryAFNetworkReachabilityStatusBlock networkReachabilityStatusBlock;
+@property (readwrite, nonatomic, assign) APIAFNetworkReachabilityStatus networkReachabilityStatus;
+@property (readwrite, nonatomic, copy) APIAFNetworkReachabilityStatusBlock networkReachabilityStatusBlock;
 @end
 
 @implementation APIAFNetworkReachabilityManager
@@ -165,7 +165,7 @@ static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
     }
 
     _networkReachability = CFRetain(reachability);
-    self.networkReachabilityStatus = StoryAFNetworkReachabilityStatusUnknown;
+    self.networkReachabilityStatus = APIAFNetworkReachabilityStatusUnknown;
 
     return self;
 }
@@ -190,11 +190,11 @@ static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
 }
 
 - (BOOL)isReachableViaWWAN {
-    return self.networkReachabilityStatus == StoryAFNetworkReachabilityStatusReachableViaWWAN;
+    return self.networkReachabilityStatus == APIAFNetworkReachabilityStatusReachableViaWWAN;
 }
 
 - (BOOL)isReachableViaWiFi {
-    return self.networkReachabilityStatus == StoryAFNetworkReachabilityStatusReachableViaWiFi;
+    return self.networkReachabilityStatus == APIAFNetworkReachabilityStatusReachableViaWiFi;
 }
 
 #pragma mark -
@@ -207,7 +207,7 @@ static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
     }
 
     __weak __typeof(self)weakSelf = self;
-    StoryAFNetworkReachabilityStatusBlock callback = ^(StoryAFNetworkReachabilityStatus status) {
+    APIAFNetworkReachabilityStatusBlock callback = ^(APIAFNetworkReachabilityStatus status) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
 
         strongSelf.networkReachabilityStatus = status;
@@ -217,8 +217,8 @@ static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
 
     };
 
-    SCNetworkReachabilityContext context = {0, (__bridge void *)callback, StoryAFNetworkReachabilityRetainCallback, StoryAFNetworkReachabilityReleaseCallback, NULL};
-    SCNetworkReachabilitySetCallback(self.networkReachability, StoryAFNetworkReachabilityCallback, &context);
+    SCNetworkReachabilityContext context = {0, (__bridge void *)callback, APIAFNetworkReachabilityRetainCallback, APIAFNetworkReachabilityReleaseCallback, NULL};
+    SCNetworkReachabilitySetCallback(self.networkReachability, APIAFNetworkReachabilityCallback, &context);
     SCNetworkReachabilityScheduleWithRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
@@ -245,7 +245,7 @@ static void StoryAFNetworkReachabilityReleaseCallback(const void *info) {
 
 #pragma mark -
 
-- (void)setReachabilityStatusChangeBlock:(void (^)(StoryAFNetworkReachabilityStatus status))block {
+- (void)setReachabilityStatusChangeBlock:(void (^)(APIAFNetworkReachabilityStatus status))block {
     self.networkReachabilityStatusBlock = block;
 }
 

@@ -24,11 +24,11 @@
 #if !TARGET_OS_WATCH
 #import <SystemConfiguration/SystemConfiguration.h>
 
-typedef NS_ENUM(NSInteger, StoryAFNetworkReachabilityStatus) {
-    StoryAFNetworkReachabilityStatusUnknown          = -1,
-    StoryAFNetworkReachabilityStatusNotReachable     = 0,
-    StoryAFNetworkReachabilityStatusReachableViaWWAN = 1,
-    StoryAFNetworkReachabilityStatusReachableViaWiFi = 2,
+typedef NS_ENUM(NSInteger, APIAFNetworkReachabilityStatus) {
+    APIAFNetworkReachabilityStatusUnknown          = -1,
+    APIAFNetworkReachabilityStatusNotReachable     = 0,
+    APIAFNetworkReachabilityStatusReachableViaWWAN = 1,
+    APIAFNetworkReachabilityStatusReachableViaWiFi = 2,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The current network reachability status.
  */
-@property (readonly, nonatomic, assign) StoryAFNetworkReachabilityStatus networkReachabilityStatus;
+@property (readonly, nonatomic, assign) APIAFNetworkReachabilityStatus networkReachabilityStatus;
 
 /**
  Whether or not the network is currently reachable.
@@ -139,7 +139,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param block A block object to be executed when the network availability of the `baseURL` host changes.. This block has no return value and takes a single argument which represents the various reachability states from the device to the `baseURL`.
  */
-- (void)setReachabilityStatusChangeBlock:(nullable void (^)(StoryAFNetworkReachabilityStatus status))block;
+- (void)setReachabilityStatusChangeBlock:(nullable void (^)(APIAFNetworkReachabilityStatus status))block;
 
 @end
 
@@ -200,7 +200,7 @@ FOUNDATION_EXPORT NSString * const APIAFNetworkingReachabilityNotificationStatus
 /**
  Returns a localized string representation of an `AFNetworkReachabilityStatus` value.
  */
-FOUNDATION_EXPORT NSString * StoryAFStringFromNetworkReachabilityStatus(StoryAFNetworkReachabilityStatus status);
+FOUNDATION_EXPORT NSString * StoryAFStringFromNetworkReachabilityStatus(APIAFNetworkReachabilityStatus status);
 
 NS_ASSUME_NONNULL_END
 #endif
