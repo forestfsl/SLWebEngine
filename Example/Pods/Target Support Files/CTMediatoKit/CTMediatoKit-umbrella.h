@@ -11,9 +11,12 @@
 #endif
 
 #import "CTMediaAFNetworkReachbilityManager.h"
+#import "CTMediator+AppStore.h"
 #import "CTMediator+Config.h"
 #import "CTMediator+RequestAPI.h"
 #import "CTMediator+SegmentViewHud.h"
+#import "CTMediator+ViewManager.h"
+#import "CTMediatorHeader.h"
 
 FOUNDATION_EXPORT double CTMediatoKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CTMediatoKitVersionString[];

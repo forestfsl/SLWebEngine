@@ -8,6 +8,7 @@
 
 #import "CTMediator+SegmentViewHud.h"
 
+
 @implementation CTMediator (SegmentViewHud)
 
 -(id)segmentViewDisplayError:(NSString *)errorMessage{

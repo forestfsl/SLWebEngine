@@ -20,6 +20,7 @@
 #import "APIHeader.h"
 #import "APIWebEngine.h"
 #import "SystemDeviceSimulateIDFA.h"
+#import "Target_APIRequestHandler.h"
 
 FOUNDATION_EXPORT double SLWebEngineVersionNumber;
 FOUNDATION_EXPORT const unsigned char SLWebEngineVersionString[];

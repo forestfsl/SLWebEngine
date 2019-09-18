@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SLWebEngine'
-  s.version          = '0.0.4'
+  s.version          = '0.0.6'
   s.summary          = 'This is a SLWebEngine.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'AFNetworking'
-  s.dependency 'CTMediatoKit', '~> 0.0.2'
+  s.dependency 'CTMediatoKit', '~> 0.0.4'
 end

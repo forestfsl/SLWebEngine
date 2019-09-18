@@ -20,15 +20,15 @@ PODS:
   - AFNetworking/UIKit (2.7.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CTMediatoKit (0.0.2):
+  - CTMediatoKit (0.0.4):
     - CTMediator
   - CTMediator (25)
-  - SLWebEngine (0.0.4):
-    - AFNetworking (~> 2.3)
-    - CTMediatoKit (~> 0.0.2)
+  - SLWebEngine (0.0.6):
+    - AFNetworking
+    - CTMediatoKit (~> 0.0.4)
 
 DEPENDENCIES:
-  - CTMediatoKit (~> 0.0.2)
+  - CTMediatoKit (~> 0.0.4)
   - SLWebEngine (from `../`)
 
 SPEC REPOS:
@@ -44,10 +44,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
-  CTMediatoKit: dd4cb5df12798d01011303837839d8473c9cf955
+  CTMediatoKit: 17040c73a3547835990c5cbdec7e2ee20f5ac3e6
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
-  SLWebEngine: a2579129a8a777f796f33902b4d55989d45da5bb
+  SLWebEngine: f2197c594be242524a7de5266f6b58fb04679ed7
 
-PODFILE CHECKSUM: b6f3de3f38b3553f98f60524286c04e7b293d8a4
+PODFILE CHECKSUM: 23ae8ed4433f8d875fef6572646b02ca3361a130
 
 COCOAPODS: 1.7.5

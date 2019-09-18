@@ -7,7 +7,7 @@
 //
 
 #import "APIWebEngine.h"
-#import "APIHeader.h"
+#import "SystemDeviceSimulateIDFA.h"
 #import "APIAFNetworking.h"
 #include <sys/sysctl.h>
 #include <net/if.h>
@@ -276,17 +276,30 @@
 - (NSString *)spliceHeader {
     
     //迟点再考虑用什么方法去获取这个appid的值
-    NSString *appid = self.gameAppId;
+    NSString *appid = [self fetchAppID];
     NSString *idfa  = [self fetchIDFA];
     NSString *appVersionCode = [self fetchAppVersionCode];
     NSString *sdkVersionCode = [self fetchSDKVersion];
     NSString *sysVersion = [self fetchSysVersion];
     NSString *model = [self fetchPhoneModel];
     NSString *bundelId = [self fetchBundleID];
-    NSString *wifiName = @"";
+    NSString *wifiName = [self fetchNetworkName];
     NSString *deviceInfo = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@ %@",appid,idfa,appVersionCode,sdkVersionCode,sysVersion,model,bundelId,wifiName];
-  
+    NSParameterAssert(appid);
+    NSParameterAssert(idfa);
+    NSParameterAssert(appVersionCode);
+     NSParameterAssert(sdkVersionCode);
+     NSParameterAssert(sysVersion);
+     NSParameterAssert(model);
+     NSParameterAssert(bundelId);
+     NSParameterAssert(wifiName);
     return deviceInfo;
+}
+
+
+- (NSString *)fetchAppID{
+    self.gameAppId = [[CTMediator sharedInstance] fetchAPPID];
+    return self.gameAppId;
 }
 
 - (NSString *)fetchNetworkName{

@@ -11,5 +11,7 @@
 
 #import "APIWebEngine.h"
 #import "SystemDeviceSimulateIDFA.h"
+#import "CTMediaAFNetworkReachbilityManager.h"
+#import "Target_APIRequestHandler.h"
 
 #endif /* APIHeader_h */
